@@ -31,4 +31,3 @@ reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Excel\Security" /v Req
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\PowerPoint\Security" /v RequireAddinSig /t REG_DWORD /d 1 /f
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\PowerPoint\Security\Trusted Locations\Location0" /v Path /t REG_EXPAND_SZ /d %APPDATA%\Microsoft\Templates_new\ /f
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\PowerPoint\Security\Trusted Locations\Location2" /v Path /t REG_EXPAND_SZ /d %APPDATA%\Microsoft\Addins_new\ /f
-del office_opt_security_USER.bat
