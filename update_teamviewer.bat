@@ -5,3 +5,5 @@ powershell.exe -command wget "https://download.teamviewer.com/download/version_1
 cd rdpwrap
 tskill teamviewer /a
 powershell.exe Start-Process -Wait -FilePath "TeamViewer_Setup.exe"  -ArgumentList "/S"
+reg import "C:\program files\rdpwrap\backup_tv.reg"
+reg import "C:\program files\rdpwrap\backup_tv_w.reg"
