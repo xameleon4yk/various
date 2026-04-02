@@ -9,3 +9,4 @@ tskill teamviewer /a
 TASKKILL /F /FI   "SERVICES eq teamviewer" /t
 reg import "C:\program files\rdpwrap\backup_tv.reg"
 reg import "C:\program files\rdpwrap\backup_tv_w.reg"
+cmd.exe net start teamviewer
