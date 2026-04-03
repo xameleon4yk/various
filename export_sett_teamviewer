@@ -1,0 +1,6 @@
+c:
+cd c:\program files
+md rdpwrap
+cd rdpwrap
+reg import "C:\program files\rdpwrap\backup_tv.reg"
+reg import "C:\program files\rdpwrap\backup_tv_w.reg"
