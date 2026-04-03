@@ -2,5 +2,5 @@ c:
 cd c:\program files
 md rdpwrap
 cd rdpwrap
-reg import "C:\program files\rdpwrap\backup_tv.reg"
-reg import "C:\program files\rdpwrap\backup_tv_w.reg"
+reg export "HKEY_LOCAL_MACHINE\SOFTWARE\TeamViewer" "C:\program files\rdpwrap\backup_tv.reg" /y
+reg export "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\TeamViewer" "C:\program files\rdpwrap\backup_tv_w.reg" /y
