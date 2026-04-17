@@ -11,5 +11,5 @@ reg import "C:\program files\rdpwrap\backup_tv.reg"
 reg import "C:\program files\rdpwrap\backup_tv_w.reg"
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\TeamViewer" /v "Always_Online" /t REG_DWORD /d 1 /f
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\TeamViewer\DefaultSettings" /v "Autostart_GUI" /t REG_DWORD /d 1 /f
-reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v "TeamViewer" /t REG_SZ /d "\"C:\Program Files\TeamViewer\TeamViewer.exe\" --Minimize" /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v "TeamViewer" /t REG_SZ /d "\"C:\Program Files\TeamViewer\TeamViewer.exe\" --Minimize --install-service" /f
 cmd.exe net start teamviewer
