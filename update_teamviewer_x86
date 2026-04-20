@@ -1,14 +1,14 @@
 c:
 cd c:\program files
 md rdpwrap
-powershell.exe -command wget "https://download.teamviewer.com/download/version_15x/15.64.5/TeamViewer_Setup.exe" -OutFile 'C:\program files\rdpwrap\TeamViewer_Setup_x86.exe'
+powershell.exe -command wget "https://download.teamviewer.com/download/TeamViewer_Setup.exe" -OutFile 'C:\program files\rdpwrap\TeamViewer_Setup_x86.exe'
 cd rdpwrap
 tskill teamviewer /a
 powershell.exe Start-Process -Wait -FilePath "TeamViewer_Setup_x86.exe"  -ArgumentList "/S"
 tskill teamviewer /a
 TASKKILL /F /FI   "SERVICES eq teamviewer" /t
-reg import "C:\program files\rdpwrap\backup_tv.reg"
-reg import "C:\program files\rdpwrap\backup_tv_w.reg"
+echo reg import "C:\program files\rdpwrap\backup_tv.reg"
+echo reg import "C:\program files\rdpwrap\backup_tv_w.reg"
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\TeamViewer" /v "Always_Online" /t REG_DWORD /d 1 /f
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\TeamViewer\DefaultSettings" /v "Autostart_GUI" /t REG_DWORD /d 1 /f
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Run" /v "TeamViewer" /t REG_SZ /d "\"C:\Program Files (x86)\TeamViewer\TeamViewer.exe\" --Minimize" /f
